@@ -1,4 +1,3 @@
-// components/Navbar.js
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
@@ -22,14 +21,17 @@ const Navbar = () => {
   return (
     <motion.nav
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
+        isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-2' : 'bg-transparent py-4'
       }`}
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <a href="#home" className="text-2xl font-bold text-indigo-600">
+        <a 
+          href="#home" 
+          className="text-2xl font-bold bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent font-display"
+        >
           Portfolio
         </a>
 
@@ -39,9 +41,10 @@ const Navbar = () => {
             <li key={item}>
               <a
                 href={`#${item}`}
-                className="text-gray-600 hover:text-indigo-600 transition-colors capitalize"
+                className="relative text-gray-600 hover:text-primary-500 transition-colors capitalize group"
               >
                 {item}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-secondary-500 transition-all duration-300 group-hover:w-full"></span>
               </a>
             </li>
           ))}
@@ -49,15 +52,15 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-gray-600"
+          className="md:hidden text-gray-600 p-2 rounded-lg hover:bg-gray-100 transition-colors"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? (
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           ) : (
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           )}
@@ -67,21 +70,28 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <motion.div
-          className="md:hidden bg-white p-4 shadow-lg"
+          className="md:hidden bg-white/95 backdrop-blur-md p-6 shadow-lg"
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
+          exit={{ opacity: 0, height: 0 }}
+          transition={{ duration: 0.3 }}
         >
-          <ul className="flex flex-col space-y-4">
+          <ul className="flex flex-col space-y-6">
             {['home', 'about', 'projects', 'contact'].map((item) => (
-              <li key={item}>
+              <motion.li 
+                key={item}
+                initial={{ x: -20, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ delay: 0.1 * ['home', 'about', 'projects', 'contact'].indexOf(item) }}
+              >
                 <a
                   href={`#${item}`}
-                  className="block text-gray-600 hover:text-indigo-600 transition-colors capitalize"
+                  className="block text-gray-600 hover:text-primary-500 transition-colors capitalize text-lg"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item}
                 </a>
-              </li>
+              </motion.li>
             ))}
           </ul>
         </motion.div>
