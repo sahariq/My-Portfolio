@@ -30,7 +30,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <a 
           href="#home" 
-          className="text-2xl font-bold bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent font-display"
+          className="text-2xl font-bold text-primary-500 font-display"
         >
           Portfolio
         </a>
@@ -41,10 +41,10 @@ const Navbar = () => {
             <li key={item}>
               <a
                 href={`#${item}`}
-                className="relative text-gray-600 hover:text-primary-500 transition-colors capitalize group"
+                className="relative text-primary-300 hover:text-primary-500 transition-colors capitalize group"
               >
                 {item}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-secondary-500 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300 group-hover:w-full"></span>
               </a>
             </li>
           ))}
@@ -52,7 +52,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-gray-600 p-2 rounded-lg hover:bg-gray-100 transition-colors"
+          className="md:hidden text-primary-500 p-2 rounded-lg hover:bg-primary-100 transition-colors"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? (
@@ -86,7 +86,7 @@ const Navbar = () => {
               >
                 <a
                   href={`#${item}`}
-                  className="block text-gray-600 hover:text-primary-500 transition-colors capitalize text-lg"
+                  className="block text-primary-500 hover:text-primary-400 transition-colors capitalize text-lg"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item}

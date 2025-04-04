@@ -35,16 +35,22 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #EDE8F5;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3b82f6;
+  background: #8697C4;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #2563eb;
+  background: #7091E6;
+}
+
+/* Selection colors */
+::selection {
+  background: #3052A0;
+  color: white;
 }
 
 /* Base styles */
@@ -59,4 +65,5 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #EDE8F5;
 }

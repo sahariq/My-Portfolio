@@ -1,4 +1,3 @@
-// App.js - Main component
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -12,7 +11,7 @@ import Footer from './components/Footer';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-slate-50 text-gray-800 font-sans">
+      <div className="min-h-screen text-primary-500 font-sans">
         <Navbar />
         <main>
           <Home />

@@ -1,4 +1,3 @@
-// components/About.js
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -22,8 +21,8 @@ const About = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl font-bold mb-2">About Me</h2>
-          <div className="w-16 h-1 bg-indigo-600 mx-auto"></div>
+          <h2 className="text-3xl font-bold mb-2 font-display">About Me</h2>
+          <div className="w-16 h-1 bg-primary-500 mx-auto"></div>
         </motion.div>
 
         <div className="md:flex md:space-x-8">
@@ -34,23 +33,20 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h3 className="text-2xl font-bold mb-4">Who Am I?</h3>
-            <p className="text-gray-600 mb-4">
+            <h3 className="text-2xl font-bold mb-4 text-primary-500">Who Am I?</h3>
+            <p className="text-primary-300 mb-4">
               I'm a passionate UI/UX designer and software engineer with a focus on creating
-              beautiful, functional, and user-friendly digital experiences. With several years
-              of experience in project management and software development, I bring a unique
-              perspective to every project I work on.
+              beautiful, functional, and user-friendly digital experiences.
             </p>
-            <p className="text-gray-600 mb-6">
+            <p className="text-primary-300 mb-6">
               My goal is to blend technical expertise with creative problem-solving to deliver
-              solutions that not only meet but exceed expectations. I'm constantly learning new
-              technologies and design trends to stay at the forefront of the industry.
+              solutions that not only meet but exceed expectations.
             </p>
             <motion.a
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
+              className="inline-block px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-400 transition-colors shadow-md"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -65,17 +61,17 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <h3 className="text-2xl font-bold mb-4">My Skills</h3>
+            <h3 className="text-2xl font-bold mb-4 text-primary-500">My Skills</h3>
             <div className="space-y-4">
               {skills.map((skill, index) => (
                 <div key={index}>
                   <div className="flex justify-between mb-1">
-                    <span className="font-medium">{skill.name}</span>
-                    <span className="text-gray-500">{skill.level}%</span>
+                    <span className="font-medium text-primary-500">{skill.name}</span>
+                    <span className="text-primary-300">{skill.level}%</span>
                   </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div className="w-full bg-primary-100 rounded-full h-2">
                     <motion.div
-                      className="bg-indigo-600 h-2 rounded-full"
+                      className="bg-primary-500 h-2 rounded-full"
                       initial={{ width: 0 }}
                       whileInView={{ width: `${skill.level}%` }}
                       viewport={{ once: true }}
