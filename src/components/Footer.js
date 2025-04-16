@@ -12,7 +12,7 @@ const Footer = () => {
           <a href="#" className="opacity-80 hover:opacity-100 transition-opacity">
             GitHub
           </a>
-          <a href="mailto:your.email@example.com" className="opacity-80 hover:opacity-100 transition-opacity">
+          <a href="mailto:sahariq9009@gmail.com" className="opacity-80 hover:opacity-100 transition-opacity">
             Email
           </a>
         </div>

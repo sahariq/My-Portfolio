@@ -35,15 +35,16 @@ const About = () => {
           >
             <h3 className="text-2xl font-bold mb-4 text-primary-500">Who Am I?</h3>
             <p className="text-primary-300 mb-4">
-              I'm a passionate UI/UX designer and software engineer with a focus on creating
-              beautiful, functional, and user-friendly digital experiences.
+            Hey! I’m a Software Engineering student at FAST NUCES Islamabad. I’ve learned a bunch of things at 
+            uni—full-stack development, databases, software design—you name it. But outside of class, 
+            I’ve found myself really into UI/UX design and project management.
             </p>
             <p className="text-primary-300 mb-6">
-              My goal is to blend technical expertise with creative problem-solving to deliver
-              solutions that not only meet but exceed expectations.
+            I love making things look and work better, whether it’s designing smooth user flows or keeping a team organized and on track.
+             Basically, I like being the person who connects the tech with the people using it.
             </p>
             <motion.a
-              href="/resume.pdf"
+              href="G:\portfolio website\v1\src\components\resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-400 transition-colors shadow-md"

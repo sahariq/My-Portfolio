@@ -19,7 +19,7 @@ const Home = () => {
           >
             <h2 className="text-lg font-medium text-primary-500 mb-2 tracking-wider">HELLO, I'M</h2>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 font-display">
-              Your Name
+              Sahar
             </h1>
             <p className="text-xl md:text-2xl text-primary-300 mb-8 max-w-lg">
               Crafting <span className="font-semibold text-primary-500">beautiful</span> digital experiences with a focus on <span className="font-semibold text-primary-400">user-centered</span> design.
@@ -54,7 +54,7 @@ const Home = () => {
           >
             <div className="w-72 h-72 md:w-96 md:h-96 mx-auto rounded-2xl bg-gradient-to-br from-primary-200 to-primary-300 shadow-2xl overflow-hidden border-8 border-white">
               <div className="w-full h-full flex items-center justify-center text-primary-300">
-                Your Photo Here
+                <img src="./components/profile.jpeg" alt="Home Image" className="w-full h-full object-cover" />
               </div>
             </div>
             <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-primary-400 rounded-xl -z-10 rotate-12"></div>
