@@ -1,0 +1,39 @@
+.about-section {
+    background: #f9f9f9;
+  }
+  
+  .about-content {
+    display: flex;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .about-content h3 {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  
+  .about-content p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 675px;
+  }
+  
+  .resume-button {
+    display: inline-block;
+    background: #d8d8d8;
+    color: #000;
+    padding: 23px 26px;
+    font-size: 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+    transition: transform 0.3s;
+  }
+  
+  .resume-button:hover {
+    transform: translateY(-3px);
+  }

@@ -1,0 +1,27 @@
+.contact-section {
+    text-align: center;
+  }
+  
+  .contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+  }
+  
+  .email-link,
+  .linkedin-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Barriecito', cursive;
+    font-size: 70px;
+    color: #1e1e1e;
+    text-decoration: none;
+  }
+  
+  .email-link img,
+  .linkedin-link img {
+    width: 50px;
+    height: 50px;
+  }
