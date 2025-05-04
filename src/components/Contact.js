@@ -11,7 +11,7 @@ const Contact = () => {
           <img src={emailIcon} alt="Email" />
           Email
         </a>
-        <a href="https://linkedin.com/in/yourprofile" className="linkedin-link">
+        <a href="https://www.linkedin.com/in/sahar-iqbal-483b162a9/" className="linkedin-link">
           <img src={linkedinIcon} alt="LinkedIn" />
           LinkedIn
         </a>

@@ -1,10 +1,101 @@
+/* Base styles */
 body {
+  transition: background-color 0.4s ease, color 0.4s ease;
+  background-color: white;
+  color: #333;
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  padding: 0;
+  font-family: sans-serif;
 }
 
+body.dark {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+/* Theme toggle */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  padding: 4px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Theme toggle - left side version */
+.theme-toggle.left-side {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  right: auto; /* Override any right positioning */
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  padding: 4px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+/* Adjust navbar positioning if needed */
+.navbar {
+  margin-left: 60px; /* Make space for the toggle button */
+}
+
+/* Rest of your existing CSS remains the same */
+
+/* Portfolio container */
 .portfolio-app {
   max-width: 1400px;
   margin: 0 auto;
+  padding: 20px;
   position: relative;
+}
+
+/* Dark mode specific styles */
+.dark .navbar {
+  background-color: #1e1e1e;
+}
+
+.dark a {
+  color: #f5f5f5;
+}
+
+/* App.css */
+body.dark {
+  background-color: #000000 !important;
+  color: #ffffff;
+}
+
+body.dark * {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border-color: #333333 !important;
+}
+
+/* Special cases where you want different dark mode colors */
+body.dark .project-card {
+  background-color: #121212 !important;
+}
+
+body.dark .tech-tag {
+  background-color: #333333 !important;
+}
+
+body.dark .resume-button {
+  background-color: #333333 !important;
+  color: #ffffff !important;
 }
