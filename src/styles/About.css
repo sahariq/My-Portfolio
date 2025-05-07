@@ -1,45 +1,39 @@
 .about-section {
-  padding: 0;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding: 200px 20px;
+  background: #ffffff;
+  transition: background-color 0.4s ease;
   text-align: center;
-  font-family: 'Inter', sans-serif;
-  background-color: inherit;
-  color: inherit;
+  font-family: Inter, sans-serif;
 }
 
-/* Dark mode styles */
 body.dark .about-section {
   background-color: #000000;
   color: #ffffff;
 }
 
+.about-section h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color:#000;
+}
+
 body.dark .about-section h2 {
   color: #ffffff;
-  font-size: 1.8rem;
-  border-bottom: 2px solid #ffffff;
-  display: inline-block;
-  padding-bottom: 4px;
 }
 
-body.dark .about-section p {
-  color: #bbbbbb;
-}
-
-.about-section h2 {
-  font-size: 24px;
+.about-section .dark h2 {
+  font-size: 1.75rem;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  color:#ffffff;
 }
 
 .underline {
-  width: 40px;
-  height: 2px;
+  width: 50px;
+  height: 3px;
   background-color: #000;
-  margin-bottom: 30px;
+  margin: 0 auto 40px;
 }
 
 body.dark .underline {
@@ -47,51 +41,87 @@ body.dark .underline {
 }
 
 .about-content {
-  max-width: 600px;
-  width: 100%;
-}
-
-.about-content h3 {
-  font-size: 32px;
-  font-weight: 600;
-  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 200px;
+  max-width: 900px;
+  margin: 0 auto;
   text-align: left;
 }
 
-.about-content p {
-  font-size: 24px;
-  font-weight: 400;
+.about-text {
+  flex: 1;
+  min-width: 250px;
+  font-size: 0.9rem;
   line-height: 1.6;
-  color: inherit;
-  text-align: left;
-  margin-bottom: 30px;
+  color: #333;
+}
+
+.about-text .dark{
+  flex: 1;
+  min-width: 250px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+body.dark .about-text {
+  color: #bbbbbb;
 }
 
 .resume-button {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 14px;
   background-color: #e0e0e0;
-  color: #000;
-  text-decoration: none;
+  padding: 10px 18px;
   border: none;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #d8d8d8;
+  cursor: pointer;
   transition: all 0.3s ease;
-  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.resume-button .dark{
+  background-color: #e0e0e0;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #424242;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 .resume-button:hover {
-  background-color: #d5d5d5;
-  transform: translateY(-2px);
+  background-color: #d0d0d0;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Dark mode button styles */
 body.dark .resume-button {
-  background-color: #333;
+  background-color: #444;
   color: #fff;
-  box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.1);
+  box-shadow: 2px 2px 6px rgba(255, 255, 255, 0.1);
 }
 
 body.dark .resume-button:hover {
-  background-color: #444;
+  background-color: #555;
+}
+
+/* Responsive layout for small screens */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .resume-button {
+    align-self: flex-start;
+  }
 }

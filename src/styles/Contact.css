@@ -13,7 +13,7 @@ body.dark .contact-section {
 
 .contact-links {
   display: flex;
-  justify-content: center;
+  justify-content: right;
   gap: 40px;
   margin-top: 40px;
   flex-wrap: wrap;
@@ -22,7 +22,7 @@ body.dark .contact-section {
 .email-link,
 .linkedin-link {
   display: flex;
-  align-items: center;
+  align-items: right;
   gap: 10px;
   font-family: 'Barriecito', cursive;
   font-size: 55px;
@@ -74,7 +74,7 @@ body.dark .linkedin-link:hover {
   
   .contact-links {
     flex-direction: column;
-    align-items: center;
+    align-items: right;
     gap: 15px;
   }
 }

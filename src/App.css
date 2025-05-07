@@ -8,9 +8,36 @@ body {
   font-family: sans-serif;
 }
 
-body.dark {
-  background-color: #121212;
-  color: #f5f5f5;
+/* Navbar - with outline completely removed */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  padding: 20px 40px;
+  z-index: 1000;
+  box-shadow: none !important;
+  outline: none !important;
+  border: none !important;
+  transition: all 0.4s ease;
+  margin-left: 60px; /* Space for toggle button */
+}
+
+.navbar.dark {
+  background-color: #000000;
+  box-shadow: none !important;
+  outline: none !important;
+  border: none !important;
+}
+
+/* Remove any potential focus outlines */
+.navbar:focus,
+.navbar:focus-visible,
+.navbar.dark:focus,
+.navbar.dark:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 /* Theme toggle */
@@ -38,7 +65,7 @@ body.dark {
   position: fixed;
   top: 20px;
   left: 20px;
-  right: auto; /* Override any right positioning */
+  right: auto;
   width: 32px;
   height: 32px;
   background: none;
@@ -50,13 +77,6 @@ body.dark {
   transition: transform 0.3s ease;
 }
 
-/* Adjust navbar positioning if needed */
-.navbar {
-  margin-left: 60px; /* Make space for the toggle button */
-}
-
-/* Rest of your existing CSS remains the same */
-
 /* Portfolio container */
 .portfolio-app {
   max-width: 1400px;
@@ -65,37 +85,85 @@ body.dark {
   position: relative;
 }
 
-/* Dark mode specific styles */
-.dark .navbar {
-  background-color: #1e1e1e;
+/* Navbar container and links - rest of your existing styles */
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.dark a {
-  color: #f5f5f5;
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-/* App.css */
-body.dark {
-  background-color: #000000 !important;
+.nav-link {
+  color: #1e1e1e;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-link.dark {
   color: #ffffff;
 }
 
-body.dark * {
-  background-color: #000000 !important;
-  color: #ffffff !important;
-  border-color: #333333 !important;
+.nav-link:hover {
+  color: #555555;
 }
 
-/* Special cases where you want different dark mode colors */
-body.dark .project-card {
-  background-color: #121212 !important;
+.nav-link.dark:hover {
+  color: #bbbbbb;
 }
 
-body.dark .tech-tag {
-  background-color: #333333 !important;
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #1e1e1e;
+  transition: width 0.3s ease;
 }
 
-body.dark .resume-button {
-  background-color: #333333 !important;
-  color: #ffffff !important;
+.nav-link.dark::after {
+  background-color: #ffffff;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+  
+  .nav-links {
+    gap: 20px;
+  }
+  
+  .nav-link {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    gap: 15px;
+  }
+  
+  .nav-link {
+    font-size: 0.8rem;
+  }
 }

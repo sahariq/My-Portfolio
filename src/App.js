@@ -33,7 +33,7 @@ function App() {
           alt={darkMode ? 'Light mode' : 'Dark mode'} 
         />
       </button>
-      <Navbar />
+      <Navbar darkMode={darkMode} />
       <main>
         <Home darkMode={darkMode} />
         <About darkMode={darkMode} />
